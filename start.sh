@@ -1,3 +1,4 @@
 #!/bin/bash
-python -m http.server -d ~/web -b 0.0.0.0 80 & java -Xmx4g -jar paper.jar
+./kill.sh #ensure to kill previous session
 
+echo Starting Server. & java -jar paper.jar & ./playit-0.9.3 -s > /dev/null

@@ -19,13 +19,13 @@ bedrock:
   clone-remote-port: false
   # The MOTD that will be broadcasted to Minecraft: Bedrock Edition clients. This is irrelevant if "passthrough-motd" is set to true
   # If either of these are empty, the respective string will default to "Geyser"
-  motd1: "COMRS Dedicated Server"
-  motd2: "A server for retards"
+  motd1: "Geyser"
+  motd2: "Another Geyser server."
   # The Server Name that will be sent to Minecraft: Bedrock Edition clients. This is visible in both the pause menu and the settings menu.
   server-name: "Cult Of Mental Retardation"
   # How much to compress network traffic to the Bedrock client. The higher the number, the more CPU usage used, but
   # the smaller the bandwidth used. Does not have any effect below -1 or above 9. Set to -1 to disable.
-  compression-level: 4
+  compression-level: 5
   # Whether to enable PROXY protocol or not for clients. You DO NOT WANT this feature unless you run UDP reverse proxy
   # in front of your Geyser instance.
   enable-proxy-protocol: false
@@ -86,7 +86,7 @@ command-suggestions: true
 
 # The following three options enable "ping passthrough" - the MOTD, player count and/or protocol name gets retrieved from the Java server.
 # Relay the MOTD from the remote server to Bedrock players.
-passthrough-motd: false
+passthrough-motd: true
 # Relay the protocol name (e.g. BungeeCord [X.X], Paper 1.X) - only really useful when using a custom protocol name!
 # This will also show up on sites like MCSrvStatus. <mcsrvstat.us>
 passthrough-protocol-name: false
@@ -104,7 +104,7 @@ ping-passthrough-interval: 3
 forward-player-ping: false
 
 # Maximum amount of players that can connect. This is only visual at this time and does not actually limit player count.
-max-players: 30
+max-players: 100
 
 # If debug messages should be sent through console
 debug-mode: false
@@ -183,6 +183,10 @@ log-player-ip-addresses: true
 # auto-update.
 notify-on-new-bedrock-update: true
 
+# Which item to use to mark unavailable slots in a Bedrock player inventory. Examples of this are the 2x2 crafting grid while in creative,
+# or custom inventory menus with sizes different from the usual 3x9. A barrier block is the default item.
+unusable-space-block: minecraft:barrier
+
 # bStats is a stat tracker that is entirely anonymous and tracks only basic information
 # about Geyser, such as how many people are online, how many servers are using Geyser,
 # what OS is being used, etc. You can learn more about bStats here: https://bstats.org/.
@@ -191,7 +195,7 @@ metrics:
   # If metrics should be enabled
   enabled: true
   # UUID of server, don't change!
-  uuid: 3fd28fb3-ef1d-4646-9c3b-e430a087cff4
+  uuid: 0ab1b8d8-3216-4dfa-a356-f69adf2a3688
 
 # ADVANCED OPTIONS - DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING!
 

@@ -6,7 +6,7 @@ key-file-name: key.pem
 # Floodgate prepends a prefix to bedrock usernames to avoid conflicts
 # However, certain conflicts can cause issues with some plugins so this prefix is configurable using the property below
 # It is recommended to use a prefix that does not contain alphanumerical to avoid the possibility of duplicate usernames.
-username-prefix: ""
+username-prefix: "."
 
 # Should spaces be replaced with '_' in bedrock usernames?
 replace-spaces: true
@@ -26,7 +26,7 @@ disconnect:
 player-link:
   # Whether to enable the linking system. Turning this off will prevent
   # players from using the linking feature even if they are already linked.
-  enabled: false
+  enabled: true
 
   # Whether to require a linked account in order to be able to join the server.
   require-link: false
@@ -56,11 +56,11 @@ player-link:
   # -> Your server-specific linking database will have priority over global linking.
   # Global Linking should normally only be disabled when you don't have internet access or when
   # you have limited internet access.
-  enable-global-linking: false
+  enable-global-linking: true
 
 metrics:
   enabled: true
-  uuid: a768151d-61dd-49a0-ad73-ac979d9dfa6e
+  uuid: 05636e5f-5776-4804-9809-92eb15365ff6
 
 # Do not change this
 config-version: 3
